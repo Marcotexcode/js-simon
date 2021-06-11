@@ -8,39 +8,76 @@
 
 
 
-// 1- CREARE UN ALERT CON NUMERI RANDOM
-
-var numRand = [];
-
-randomNumber(numRand, 5);
-
-alert(numRand);
-
-
-// Far partire un timer dopo l'alert
+// // 1- CREARE UN ALERT CON NUMERI RANDOM
+    var numRand = [];
+    randomNumber(numRand, 5);
 
 
 
 
+// FAR PARTIRE UN TIMER ALLA COMPARSA DELL ALERT
 
 
+var contare = setInterval(timer, 0);
 
-
-// FUNZIONI
-
-function randomNumber(arr, nMax){
-
-    while(arr.length < nMax){
-        var numeroRandom = randomNumber(1,100); // GENERARE UN NUMERO RANDOM DA-A
-        if(!arr.includes(numeroRandom)){
-            arr.push(numeroRandom);
-        }
-    }
-
-    function randomNumber(min,max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
+function timer() {
+        alert(numRand);
 }
+
+clearInterval(contare); 
+
+
+setTimeout(cancell, 000);
+
+function cancell() {
+    clearInterval(contare); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // FUNZIONI
+
+     function randomNumber(arr, nMax){
+
+         while(arr.length < nMax){
+             var numeroRandom = randomNumber(1,100);    // GENERARE UN NUMERO RANDOM DA-A
+             if(!arr.includes(numeroRandom)){
+                 arr.push(numeroRandom);
+             }
+         }
+
+         function randomNumber(min,max) {
+             return Math.floor(Math.random() * (max - min + 1) + min);
+         }
+     }
 
 
    
