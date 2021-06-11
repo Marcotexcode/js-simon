@@ -12,61 +12,29 @@
     var numRand = [];
     randomNumber(numRand, 5);
 
+    alert('Hai 30 secondi per memorizzare i numeri dopo aver premuto ok ' + numRand);
+
+
+// FAR PARTIRE IL TIMER DOPO AVER CHIUSO L'ALERT
+
+    setTimeout(insNumeri, 3000);
 
 
 
-// FAR PARTIRE UN TIMER ALLA COMPARSA DELL ALERT
+// INSERIRE 5 NUMERI UNO ALLA VOLTA TRAMITE PROMPT E INSERIRLI IN UN ARRAY
 
+    var numUtente = [];
 
-var contare = setInterval(timer, 0);
+    console.log(numUtente);
 
-function timer() {
-        alert(numRand);
-}
+    function insNumeri() {
+        for (var i = 0; i < 5; i ++) { 
+            var numeri = parseInt(prompt('Inserisci i 5 numeri visti percedentemente'));
 
-
-setTimeout(cancell, 3000);
-
-function cancell() {
-    clearInterval(contare); 
-}
-
-
-
-
-
-// var time = 10;
-// var contare = setInterval(function(){
-
-
-// if (time == 0){
-//     clearInterval(contare);
-// } else {
-//     alert();
-//     time--;
-// }
-
-// }, 1000);
-
-// console.log(time);
-
-
-// function alert() {
-//     alert(numRand);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
+            numUtente.push(numeri);
+        
+        }
+    }
 
 
 
