@@ -24,10 +24,8 @@ function timer() {
         alert(numRand);
 }
 
-clearInterval(contare); 
 
-
-setTimeout(cancell, 000);
+setTimeout(cancell, 3000);
 
 function cancell() {
     clearInterval(contare); 
