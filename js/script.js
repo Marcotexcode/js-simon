@@ -35,9 +35,25 @@ function cancell() {
 
 
 
+// var time = 10;
+// var contare = setInterval(function(){
 
 
+// if (time == 0){
+//     clearInterval(contare);
+// } else {
+//     alert();
+//     time--;
+// }
 
+// }, 1000);
+
+// console.log(time);
+
+
+// function alert() {
+//     alert(numRand);
+// }
 
 
 
