@@ -11,34 +11,47 @@
 // // 1- CREARE UN ALERT CON NUMERI RANDOM
     var numRand = [];
     randomNumber(numRand, 5);
+    
 
-    alert('Hai 30 secondi per memorizzare i numeri dopo aver premuto ok ' + numRand);
+    alert('Hai 30 secondi per memorizzare i numeri dopo aver premuto ok ' + numRand + '.');
 
 
 // FAR PARTIRE IL TIMER DOPO AVER CHIUSO L'ALERT
-
+    
     setTimeout(insNumeri, 3000);
 
-
-
+    
 // INSERIRE 5 NUMERI UNO ALLA VOLTA TRAMITE PROMPT E INSERIRLI IN UN ARRAY
 
-    var numUtente = [];
-
-    console.log(numUtente);
-
     function insNumeri() {
-        for (var i = 0; i < 5; i ++) { 
-            var numeri = parseInt(prompt('Inserisci i 5 numeri visti percedentemente'));
 
-            numUtente.push(numeri);
+        var numUtente =[];
         
-        }
+        var numInd = [];
+       
+        for (var i = 0; i < numRand.length; i ++) { 
+            var numeri = parseInt(prompt('Inserisci i 5 numeri visti percedentemente'));
+            numUtente.push(numeri);
+          
+            if (numUtente.includes(numRand[i])){
+                numInd.push(numeri); 
+                document.getElementById('vinto-perso').innerHTML = 'HAI VINTO';
+                document.getElementById('num-indovinati').innerHTML = 'Hai indovinato ' + numInd + '.';
+                
+               
+            } else {
+                document.getElementById('vinto-perso').innerHTML = 'HAI PERSO';
+                document.getElementById('num-indovinati').innerHTML = 'Hai indovinato solo ' + numInd + '.';
+                alert('perso');
+                break;
+            }
+            
+        }        
+        document.getElementById('numeri-pc').innerHTML = 'Numeri da indovinare ' +  numRand + '.' ;
+     return numUtente;
     }
-
-
-
-
+    
+    
 
 
 
